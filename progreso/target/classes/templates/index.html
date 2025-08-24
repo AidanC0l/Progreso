@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Progreso</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Progreso</h1>
+
+    <div class="battery">
+        <!-- width dinámico usando Thymeleaf -->
+        <div class="level" th:style="'width:' + ${progreso} + '%'"></div>
+    </div>
+
+    <div class="percentage">
+        <span th:text="${progreso}">0</span>%
+    </div>
+</body>
+</html>
